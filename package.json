@@ -1,0 +1,29 @@
+{
+  "name": "gkd-cli",
+  "version": "0.0.1",
+  "description": "my cli",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SSRChen/gkd-cli.git"
+  },
+  "keywords": [
+    "gkd",
+    "cli"
+  ],
+  "author": "Yingjian Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SSRChen/gkd-cli/issues"
+  },
+  "bin": {
+    "gkd": "bin/gkd.js"
+  },
+  "homepage": "https://github.com/SSRChen/gkd-cli#readme",
+  "dependencies": {
+    "commander": "^5.0.0",
+    "download-git-repo": "^3.0.2",
+    "ncp": "^2.0.0",
+    "ora": "^4.0.3"
+  }
+}
