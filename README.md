@@ -2,7 +2,6 @@
 自己开发用的脚手架，名字随便取，就叫搞快点好了
 
 ### create
-.command('create <app-name>')  
 .description('通过模板项目创建新项目')  
 .option('-u, --update', '是否下载最新模板，否则将优先使用本地缓存')  
 .option('-p, --project <projectName>', 'git项目名')  
