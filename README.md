@@ -2,11 +2,13 @@
 自己开发用的脚手架，名字随便取，就叫搞快点好了
 
 ### create
+.command('create <app-name>')  
 .description('通过模板项目创建新项目')  
 .option('-u, --update', '是否下载最新模板，否则将优先使用本地缓存')  
 .option('-p, --project <projectName>', 'git项目名')  
    
  ### generate    
+.command('generate <type> <name>')  
 .description('通过模板创建组件 type: page | service | component')  
 .option('-temp, --template <templateName>', '使用模板，默认使用default.template')  
 .option('-t, --title <title>', '仅type为page有效，页面名称')  
