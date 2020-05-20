@@ -5,9 +5,10 @@ program
     .version(`gkd-cli ${require('../package').version}`)
     .usage('<command> [options]')
 
-
 program
     .command('create <app-name>')
+    .option('-u, --update', '是否下载最新模板，否则将优先使用本地缓存')
+    .option('-p, --project <projectName>', 'git项目名')
     .description('通过模板项目创建新项目')
     .action((name, cmd) => {
         const option = cleanArgs(cmd)
@@ -22,6 +23,9 @@ program
     .option('-a, --auth', '仅type为page有效，路由是否校验登录权限')
     .option('-r, --root', '仅type为page有效，是否为根页面')
     .option('-k, --keepAlive', '仅type为page有效，路由是否缓存')
+    .option('-p, --path <routePath>', '仅type为page有效，路由的path(开头不加“/”)，默认由name生成')
+    .option('-s, --service <serviceName>', '仅type为page有效，页面使用的service(无需加Service后缀)，默认由name生成')
+    .option('-f, --fileName <fileName>', '生成的文件名，不带文件类型，默认由name生成')
     .action((type, name, cmd) => {
         const option = cleanArgs(cmd);
         require('../lib/generate')(type, name, option);
